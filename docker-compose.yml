@@ -21,3 +21,5 @@ services:
       - 3306:3306
     volumes:
       - ~/docker/volumes/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root

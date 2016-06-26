@@ -12,4 +12,4 @@ RUN apt-get update && apt-get install -y git\
 
 RUN echo "date.timezone=UTC" >> /usr/local/etc/php/php.ini
 
-#COPY credentials "/root/.aws/credentials"
+COPY credentials "/root/.aws/credentials"

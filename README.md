@@ -1,3 +1,6 @@
+#Requisitos
+Tener instalada la versión nativa de docker para su sistema operativo, para mayor informacón ir a [http://www.docker.com/products/docker](http://www.docker.com/products/docker)
+
 #Uso
 1. Clone este repositorio
 2. Haga los cambios que desee (ver detalles más abajo)
@@ -8,7 +11,7 @@ Este repositorio pretender servir como una plantilla para un entorno de desarrol
 - Mongo
 - MySQL
 - Apache (con PHP)
--
+
 Las imágenes utilizadas como servicio (mongo y mysql), no han sido modificadas.
 
 ## Mongo
@@ -36,7 +39,7 @@ Esta imagen es la principal donde se publica el código fuente y se personaliza 
 
 En el archivo docker-compose.yml tambien se pueden cambiar otros parametros como las variables de entorno, el puerto sobre el cual funcionara Apache y el directorio que se montará como un volumen en el directorio raiz de Apache.
 
-El repositorio incluye el archivo `credentials` donde puede ingresar sus llaves para AWS 
+El repositorio incluye el archivo `credentials.dist` el cual puede copiar (removiendo la extensión) donde puede ingresar sus llaves para AWS. No olvide quitar el comentario del comando COPY en `Dockerfile`
 
 Configuración por defecto:
 

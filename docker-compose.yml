@@ -3,11 +3,11 @@ services:
   web:
     build: .
     volumes:
-      - .:/var/www/html
+      - ~/Code/php:/var/www/html
     ports:
       - 80:80
     environment:
-       DEBUG: true
+       DEBUG: "true"
   mongodb:
     image: mongo
     volumes:

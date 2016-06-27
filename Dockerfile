@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y git\
     libjpeg62-turbo-dev \
     libmcrypt-dev \
     libpng12-dev \
-    && docker-php-ext-install pdo_mysql gd \
+    libicu-dev \
+    && docker-php-ext-install pdo_mysql gd intl \
     && pecl install mongo && docker-php-ext-enable mongo
 
 RUN echo "date.timezone=UTC" >> /usr/local/etc/php/php.ini
